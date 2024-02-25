@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<title>Taylor Swift - 1989 (TV) Album</title>
+</head>
+<body>
+
+  <div class="media-player">
+    <h2>1989 (Taylor's Version)</h2>
+    <audio id="myAudio"></audio>
+    <div class="cover-art-container">
+      <img id="coverArt" src="default-cover.jpg" alt="Cover Art">
+      <h2 id="currentSongTitle" >Song Title</h2>
+      <h4>Taylor Swift</h4>
+    </div>
+    <div class="controls">
+      <button class="control-button shuffle" onclick="toggleShuffleMode()">Shuffle: off</button>
+
+      <input type="range" class="seek-bar" value="0" max="100" step="1" onchange="updateSeekBar(this.value)">
+      
+      <span class="current-time">0:00</span>
+      <button class="control-button previous" onclick="playPrevious()">&#9668; &#9668 </button>
+      <button class="control-button play-pause" onclick="togglePlayPause()">Play</button>
+      <button class="control-button next" onclick="playNext()">&#9658 &#9658;</button>
+      <span class="total-time">0:00</span>
+    </div>
+
+    <div class="queue">
+      <h3>Playing Queue</h3>
+      <ul id="songQueue"></ul>
+    </div>
+  </div>
+  <h5 class="credit" align="center">Made With &#10084; by Moin Yesin</h5>
+
+  <script src="script.js"></script>
+</body>
+</html>
